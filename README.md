@@ -67,48 +67,6 @@ GET /api/health  ->  { status: "ok" }
 
 ---
 
-## What’s in the box
-```bash
-.
-├─ config/
-│  ├─ clients/static/flags.json   # per-client static feature flags (example client)
-│  └─ schema.ts                   # feature-flag schema/types
-├─ docs/
-│  ├─ ARCHITECTURE.md             # high-level architecture
-│  └─ BACKLOG.md                  # project backlog and plan
-├─ e2e/
-│  └─ specs/smoke.spec.ts         # Playwright smoke tests
-├─ infra/
-│  └─ docker-compose.yml          # local Postgres
-├─ lib/
-│  ├─ db.ts                       # Prisma client singleton
-│  ├─ feature.ts                  # feature helpers (server-side gating)
-│  └─ flags.ts                    # loads/merges flags (server/client)
-├─ prisma/
-│  ├─ schema.prisma               # data models
-│  └─ seed.ts                     # optional seed script
-├─ public/                        # static assets (svgs, icons)
-├─ scripts/
-│  ├─ ensure/                     # helper/ensure scripts (infra, prechecks)
-│  └─ gen/                        # codegen/utility scripts
-├─ src/app/
-│  ├─ api/health/route.ts         # health endpoint
-│  ├─ favicon.ico
-│  ├─ globals.css                 # Tailwind base styles
-│  ├─ layout.tsx                  # root layout
-│  └─ page.tsx                    # landing page
-├─ .env                           # your local env (not committed)
-├─ eslint.config.mjs              # ESLint config
-├─ next.config.ts                 # Next.js config
-├─ playwright.config.ts           # Playwright config
-├─ postcss.config.mjs             # PostCSS + Tailwind
-├─ tailwind.config.ts             # Tailwind CSS config
-├─ tsconfig.json                  # TypeScript config
-└─ README.md
-```
-
----
-
 ## Development Guide
 
 ### Feature toggles (per-client)

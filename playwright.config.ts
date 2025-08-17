@@ -1,7 +1,7 @@
 import { defineConfig } from "@playwright/test";
 
 export default defineConfig({
-  testDir: "./e2e/specs",
+  testDir: "./test/e2e/specs",
   webServer: {
     command: "pnpm dev",
     port: 3000,
