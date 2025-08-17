@@ -1,1 +1,1 @@
-# DuetSoftware
+# DuetSoft
