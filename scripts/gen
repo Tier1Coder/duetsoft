@@ -1,0 +1,26 @@
+import fs from "fs";
+import path from "path";
+
+const client = process.argv[2] || "static";
+const flagsPath = path.join(
+  process.cwd(),
+  "config",
+  "clients",
+  client,
+  "flags.json"
+);
+
+if (!fs.existsSync(flagsPath)) {
+  console.error(`Flags file not found for client: ${client}`);
+  process.exit(1);
+}
+
+const raw = fs.readFileSync(flagsPath, "utf-8");
+const flags = JSON.parse(raw);
+
+const out = `// GENERATED
+export const FLAGS = ${JSON.stringify(flags)} as const;
+`;
+
+fs.writeFileSync(path.join(process.cwd(), "lib", "flags.ts"), out);
+console.log(`Generated flags for client=${client}`);

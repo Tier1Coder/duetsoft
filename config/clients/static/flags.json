@@ -1,0 +1,8 @@
+{
+  "auth": false,
+  "db": false,
+  "products": false,
+  "orders": false,
+  "checkout": false,
+  "paymentProvider": "test"
+}
