@@ -1,27 +1,37 @@
-import "./globals.css";
-import type { Metadata } from "next";
+import './globals.css'
+import Link from 'next/link'
 
-export const metadata: Metadata = {
-  title: "Template App",
-  description: "Reusable Next.js full-stack template",
-};
+export const metadata = { title: 'Stajnia Decyma' }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="h-full">
-      <body className="min-h-full flex flex-col">
-        <header className="bg-gray-800 text-white p-4">
-          <div className="container mx-auto">Template App</div>
+    <html lang="pl">
+      <body>
+        {/* Pasek górny */}
+        <header className="topbar">
+          <div className="wrap">
+            <Link href="/" className="brand">Stajnia Decyma</Link>
+            <nav className="menu">
+              <Link href="/onas">O nas</Link>
+              <Link href="/aktualnosci">Aktualności</Link>
+              <Link href="/oferta">Oferta</Link>
+              <Link href="/konie">Nasze konie</Link>
+              <Link href="/regulamin">Regulamin</Link>
+              <Link href="/kontakt">Kontakt</Link>
+            </nav>
+          </div>
         </header>
-        <main className="flex-1 container mx-auto p-4">{children}</main>
-        <footer className="bg-gray-100 p-4 text-center">
-          <p className="text-sm text-gray-600">&copy; 2025 Template</p>
+
+        {/* Treść strony */}
+        <main>{children}</main>
+
+        {/* Prosta stopka z CTA */}
+        <footer className="footer-cta">
+          <div className="wrap center">
+            <Link href="/kontakt" className="btn-primary">Skontaktuj się z nami</Link>
+          </div>
         </footer>
       </body>
     </html>
-  );
+  )
 }

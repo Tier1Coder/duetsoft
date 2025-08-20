@@ -1,8 +1,217 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* ===== Kolory i zmienne (dopasowane do screena) ===== */
+:root{
+  --bg: #eeeff1;           /* jasne tło strony */
+  --surface: #ffffff;      /* karty */
+  --line: #e7e7ea;         /* delikatne obramowania */
+  --text: #383838;         /* tekst ciemnoszary */
+  --gold: #c79a45;         /* złoty jak w logo/tekście */
+  --gold-strong: #b6882e;  /* hover/przyciski */
+  --shadow: 0 8px 24px rgba(0,0,0,.04), 0 1px 0 rgba(0,0,0,.04);
+  --radius: 14px;
+  --wrap: 1040px;          /* szerokość kontentu jak na screenie */
+}
 
-html,
-body {
-  height: 100%;
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; font-family: "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.7;
+}
+
+/* ===== Layout bazowy ===== */
+.page-bg{ padding: 18px 0 48px; }
+.wrap{ max-width: var(--wrap); margin: 0 auto; padding: 0 22px; }
+.center{ display:flex; justify-content:center; align-items:center; }
+
+/* ===== Pasek górny ===== */
+.topbar{
+  position: sticky; top: 0; z-index: 30;
+  background: #fff; border-bottom: 1px solid var(--line);
+}
+.topbar .wrap{
+  display:flex; align-items:center; justify-content:space-between;
+  padding: 12px 22px;
+}
+.brand{
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 25px;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+}
+.menu{ display:flex; gap: 22px; }
+.menu a{
+  color: var(--gold);
+  text-decoration:none;
+  font-size: 20px;
+  letter-spacing: .2px;
+}
+.menu a:hover{ color: var(--gold-strong); }
+
+/* ===== Karty (białe bloki jak na screenie) ===== */
+.card{
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin: 18px auto;
+}
+.card--logo{ padding: 2px; }
+.card--hero{ padding: 28px 0 34px; }
+.card--cta{  padding: 22px 0; }
+
+/* ===== Logo (duże, wycentrowane pod paskiem) ===== */
+.logo-box{
+  position: relative;
+  height: 540px;          /* wysokość jak na screenie */
+  margin: 0 auto;
+}
+@media (min-width: 900px){
+  .logo-box{ height: 600px; }
+}
+.logo-box img{ object-fit: contain; width:100%; height:100%; display:block; }
+
+/* ===== Hero: układ 2 kolumny (tekst + foto) ===== */
+.hero{
+  display: grid !important;
+  grid-template-columns: 0.9fr 1.1fr;
+  column-gap: 80px !important;   /* większy odstęp */
+}
+
+@media (min-width: 900px){
+  .hero__image{ margin-left: 40px; }
+  .hero__text{ padding-right: 12px; }
+}
+
+/* Tekst w złotym kolorze, justowany i wąska kolumna */
+.hero__text p{
+  color: var(--gold);
+  text-align: justify;
+  hyphens: auto;
+  margin: 0 0 4px 0;
+  font-size: 18px;
+  letter-spacing: .2px;
+}
+
+/* Zdjęcie po prawej: duży zaokrąglony prostokąt */
+.hero__image{
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 2px 0 rgba(0,0,0,.02);
+}
+@media (min-width: 900px){
+  .hero__image{ aspect-ratio: 4 / 3; }
+}
+.hero__image img{
+  width:100%; height:100%; object-fit: cover; display:block;
+}
+
+/* ===== CTA (przycisk na dole karty) ===== */
+.btn-primary{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding: 12px 22px;
+  border-radius: 10px;
+  background: var(--gold);
+  color: #1a1a1a;
+  font-weight: 700; font-size: 14.5px;
+  text-decoration: none;
+  box-shadow: 0 2px 0 rgba(0,0,0,.06);
+  transition: background .15s ease, transform .02s ease;
+}
+.btn-primary:hover{ background: var(--gold-strong); }
+.btn-primary:active{ transform: translateY(1px); }
+
+/* ===== Stopka / kontakt ===== */
+.footer{
+  background: transparent;
+  margin-top: 10px;
+}
+.footer .wrap{ padding-top: 8px; }
+.footer h2{
+  margin: 8px 0 6px; font-size: 18px; font-weight: 700;
+}
+.footer p{
+  margin: 0; color: #4b5563; font-size: 15px;
+}
+
+/* ===== Drobne dostrojenia pod „look” ze screena ===== */
+.card--logo .wrap{ padding: 2p; }
+.card--hero .wrap{ padding-top: 6px; }
+
+/* złoty tekst na podstronie "O nas" */
+.card--text p {
+  color: var(--gold);
+  text-align: justify;
+  font-size: 18px;
+  line-height: 1.7;
+  letter-spacing: .2px;
+  margin: 0 0 14px;
+}
+.card--text h1 {
+  color: var(--gold);
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0 0 18px;
+}
+
+.onas-image{
+  margin-top: 24px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+  text-align: center;       /* wyśrodkowanie podpisu */
+
+}
+.onas-image img{
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.onas-image figcaption {
+  margin-top: 8px;
+  font-size: 18px;
+  color: var(--gold);
+}
+/* Kontakt – układ pionowy + większa mapa */
+.contact-grid{
+  display: block;                 /* zamiast grida/kolumn */
+}
+.contact-grid > * + *{
+  margin-top: 28px;               /* odstęp między blokami */
+}
+
+.contact-list{
+  margin:12px 0 16px 0; padding:0; list-style:none;
+}
+.contact-list li{
+  margin:6px 0; font-size:18px; color:var(--gold);
+}
+.contact-list a{ color:var(--gold); text-decoration:underline; }
+
+.contact-cta{
+  display:flex; gap:12px; flex-wrap:wrap; margin-top:12px;
+}
+
+/* mapa pod danymi, większa wysokość */
+.map-box{
+  border:1px solid var(--line);
+  border-radius:16px;
+  overflow:hidden;
+  background:#fafafa;
+  width:100%;
+  height:420px;                   /* powiększona */
+}
+.map-box iframe{
+  width:100%; height:100%; border:0; display:block;
+}
+
+/* (na wszelki wypadek) nadpisz stare media-query */
+@media (min-width: 900px){
+  .contact-grid{ display:block !important; }
 }
