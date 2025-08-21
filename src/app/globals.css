@@ -1,7 +1,7 @@
 /* ===== Kolory i zmienne (dopasowane do screena) ===== */
-:root{
+:root {
   --bg: #eeeff1;           /* jasne tło strony */
-  --surface: #ffffff;      /* karty */
+  --surface: #fff;         /* karty */
   --line: #e7e7ea;         /* delikatne obramowania */
   --text: #383838;         /* tekst ciemnoszary */
   --gold: #c79a45;         /* złoty jak w logo/tekście */
@@ -11,27 +11,47 @@
   --wrap: 1040px;          /* szerokość kontentu jak na screenie */
 }
 
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
 body{
-  margin:0; font-family: "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-  color:var(--text);
-  background:var(--bg);
-  line-height:1.7;
+  margin: 0;
+  font-family: "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.7;
 }
 
 /* ===== Layout bazowy ===== */
-.page-bg{ padding: 18px 0 48px; }
-.wrap{ max-width: var(--wrap); margin: 0 auto; padding: 0 22px; }
-.center{ display:flex; justify-content:center; align-items:center; }
+.page-bg {
+  padding: 18px 0 48px;
+}
+.wrap {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0 22px;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* ===== Pasek górny ===== */
 .topbar{
-  position: sticky; top: 0; z-index: 30;
-  background: #fff; border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
 }
 .topbar .wrap{
-  display:flex; align-items:center; justify-content:space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 12px 22px;
 }
 .brand{
@@ -41,37 +61,48 @@ body{
   letter-spacing: 0.2px;
   text-decoration: none;
 }
-.menu{ display:flex; gap: 22px; }
+.menu {
+  display: flex;
+  gap: 22px;
+}
 .menu a{
   color: var(--gold);
-  text-decoration:none;
+  text-decoration: none;
   font-size: 20px;
   letter-spacing: .2px;
 }
-.menu a:hover{ color: var(--gold-strong); }
+.menu a:hover {
+  color: var(--gold-strong);
+}
 
 /* ===== Karty (białe bloki jak na screenie) ===== */
-.card{
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  margin: 18px auto;
+.card--logo {
+  padding: 0;              /* usuń odstęp wewnętrzny */
+  background: #fff;        /* całe tło białe */
+  border: none;            /* bez ramki */
+  box-shadow: none;        /* bez cienia */
+  margin-bottom: 50px; 
 }
-.card--logo{ padding: 2px; }
-.card--hero{ padding: 28px 0 34px; }
-.card--cta{  padding: 22px 0; }
 
-/* ===== Logo (duże, wycentrowane pod paskiem) ===== */
-.logo-box{
+.logo-box {
   position: relative;
-  height: 540px;          /* wysokość jak na screenie */
+  height: 540px;
   margin: 0 auto;
+  background: #fff;        /* dopilnuj, że tło też białe */
 }
-@media (min-width: 900px){
-  .logo-box{ height: 600px; }
+
+@media (min-width: 900px) {
+  .logo-box { height: 600px; }
 }
-.logo-box img{ object-fit: contain; width:100%; height:100%; display:block; }
+
+.logo-box img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: #fff;        /* logo ma białe tło */
+}
+
 
 /* ===== Hero: układ 2 kolumny (tekst + foto) ===== */
 .hero{
@@ -126,10 +157,26 @@ body{
 .btn-primary:active{ transform: translateY(1px); }
 
 /* ===== Stopka / kontakt ===== */
-.footer{
-  background: transparent;
-  margin-top: 10px;
+/* CTA w stopce jako karta z oddechem */
+.footer-cta {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 32px 0;
+  margin: 24px auto 32px;
 }
+
+/* na wszelki wypadek: ostatnia karta też ma oddech na dole */
+.card:last-of-type {
+  margin-bottom: 24px;
+}
+
+/* jeśli gdzieś jeszcze masz .footer – wyłącz */
+.footer {
+  display: none;
+}
+
 .footer .wrap{ padding-top: 8px; }
 .footer h2{
   margin: 8px 0 6px; font-size: 18px; font-weight: 700;
@@ -139,8 +186,19 @@ body{
 }
 
 /* ===== Drobne dostrojenia pod „look” ze screena ===== */
-.card--logo .wrap{ padding: 2p; }
-.card--hero .wrap{ padding-top: 6px; }
+.card--logo .wrap{ 
+  padding: 2px; 
+}
+.card--hero .wrap{ 
+  padding-top: 16px; 
+  padding-bottom: 40px;
+}
+
+.card--hero .btn-primary {
+  margin-top: 22px;       /* mały odstęp od tekstu/zdjęcia */
+  padding-bottom: 40px;
+
+}
 
 /* złoty tekst na podstronie "O nas" */
 .card--text p {
@@ -214,4 +272,218 @@ body{
 /* (na wszelki wypadek) nadpisz stare media-query */
 @media (min-width: 900px){
   .contact-grid{ display:block !important; }
+}
+
+/* Nasze konie */
+.horses-grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin-top: 12px;
+}
+@media (min-width: 700px){
+  .horses-grid{ grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 1040px){
+  .horses-grid{ grid-template-columns: 1fr 1fr 1fr; }
+}
+
+.horse-card{
+  border:1px solid var(--line);
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 2px 6px rgba(0,0,0,.06);
+  background:#fff;
+}
+
+.horse-card img{
+  width:100%;
+  height: 240px;             /* ujednolicona wysokość miniatur */
+  object-fit: cover;
+  display:block;
+}
+
+.horse-card figcaption{
+  padding: 10px 12px 14px;
+  text-align:left;
+}
+
+/* Media w karcie konia – pełny obraz, efekt zoom przy najechaniu */
+.horse-media {
+  aspect-ratio: 16 / 12;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  overflow: hidden;
+  border: none;
+  padding: 0;
+  width: 100%;
+  cursor: zoom-in;
+  border-radius: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.05);
+  transition: box-shadow .18s;
+}
+.horse-media:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,.10);
+}
+.horse-media img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform .25s cubic-bezier(.4,0,.2,1);
+  border-radius: 12px;
+}
+.horse-media:hover img {
+  transform: scale(1.08);
+}
+
+/* Lightbox – wyśrodkowany obrazek na ciemnym tle */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0,0,0,.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+  animation: fadeIn .18s;
+}
+.lightbox img {
+  max-width: 92vw;
+  max-height: 92vh;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,.25);
+}
+
+/* Animacja pojawiania się lightboxa */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.horses-grid {
+  display: grid;
+  gap: 8px; /* odstęp między kartami */
+  grid-template-columns: 1fr; /* domyślnie na telefonie 1 kolumna */
+}
+
+@media (min-width: 700px) {
+  .horses-grid {
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+  }
+}
+
+.horse-name {
+  font-weight: 700;   /* pogrubienie */
+  font-size: 1.15rem; /* możesz lekko powiększyć czcionkę */
+  margin-bottom: 4px; /* mały odstęp nad opisem */
+  color: var(--gold);     /* złoty kolor */
+
+}
+
+.rules-list {
+  margin: 0 0 14px 18px;
+    font-size: 1.15rem;
+}
+
+.rules-list > li {
+  margin-bottom: 8px;
+  color: var(--gold);
+}
+
+.rules-list ul {
+  margin-top: 8px;
+}
+
+
+.news-form {
+  display: grid;
+  gap: 12px;
+  margin: 12px 0 20px 0;
+}
+
+.news-form label {
+  display: grid;
+  gap: 6px;
+  color: var(--gold);
+  font-size: 16px;
+}
+
+.news-form input[type="text"],
+.news-form input[type="password"],
+.news-form textarea {
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  font-size: 16px;
+}
+
+.news-rows {
+  display: grid;
+  gap: 10px;
+}
+
+.news-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.news-list {
+  display: grid;
+  gap: 18px;
+}
+
+.news-item h3 {
+  margin: 0 0 8px 0;
+  color: var(--gold);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.news-item p {
+  color: var(--gold);
+  margin: 0 0 10px 0;
+}
+
+.news-photos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+@media (min-width: 700px) {
+  .news-photos {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.news-photo {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.news-photo img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.news-photo figcaption {
+  padding: 6px 10px;
+  font-size: 14px;
+  color: var(--gold);
+}
+
+.news-meta {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #6b7280;
 }

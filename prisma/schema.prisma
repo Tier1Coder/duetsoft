@@ -63,3 +63,18 @@ model Product {
   userId      String?
   user        User?    @relation(fields: [userId], references: [id])
 }
+model NewsPost {
+  id        String       @id @default(cuid())
+  title     String
+  body      String?
+  photos    NewsPhoto[]
+  createdAt DateTime     @default(now())
+}
+
+model NewsPhoto {
+  id        String   @id @default(cuid())
+  url       String
+  caption   String?
+  post      NewsPost @relation(fields: [postId], references: [id], onDelete: Cascade)
+  postId    String
+}
