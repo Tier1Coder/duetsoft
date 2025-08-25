@@ -1,10 +1,38 @@
+import Image from 'next/image';
+import Link from 'next/link';
+
+export const metadata = { title: 'Stajnia Decyma' };
+
 export default function HomePage() {
   return (
-    <div className="text-center mt-16">
-      <h1 className="text-4xl font-bold">Welcome to the Template App</h1>
-      <p className="mt-4 text-gray-600">
-        This is the base skeleton with Next.js, Tailwind, Prisma, and Auth.js.
-      </p>
+    <div className="page-bg">
+
+      <section className="card card--logo">
+        <div className="wrap">
+          <div className="logo-box">
+            <Image src="/logo.png" alt="Stajnia Decyma" fill priority />
+          </div>
+        </div>
+      </section>
+
+      <section id="onas" className="card card--hero">
+        <div className="wrap">
+          <div className="hero">
+            <div className="hero__text">
+              <p>
+                Zapraszamy do Stajni Decyma – miejsca, w którym pasja do koni spotyka się z gościnnością i naturą.
+                Oferujemy naukę jazdy konnej dla dzieci i dorosłych, rekreacyjne wypady w teren, imprezy okolicznościowe
+                i nie tylko. Jeśli szukasz wypoczynku z dala od zgiełku miasta, nasza skromna stajnia będzie idealnym
+                wyborem. Sprawdź naszą ofertę i przekonaj się, jak wyjątkowy może być czas spędzony w siodle i w otoczeniu przyrody.
+              </p>
+            </div>
+
+            <div className="hero__image">
+              <Image src="/hero.jpg" alt="Konie na pastwisku" fill sizes="(max-width: 1024px) 100vw, 520px" />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
