@@ -19,10 +19,7 @@ export default function AktualnosciPage() {
                 <div className="news-body">
                   <h2 className="news-title">{post.title}</h2>
                   <time className="news-date">{post.date}</time>
-                  <div
-                    className="news-desc"
-                    dangerouslySetInnerHTML={{ __html: post.desc }}
-                  />
+                  <div className="news-desc">{post.desc}</div>  
                 </div>
               </article>
             ))}
