@@ -94,7 +94,6 @@ export default function NewsClient() {
         </form>
       </details>
 
-      {/* Lista wpisów */}
       <div className="news-list">
         {posts.map(p => (
           <article className="news-item" key={p.id}>
