@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 type Horse = {
   id: number;
@@ -42,7 +43,7 @@ export default function HorsesClient() {
                   onClick={() => setActiveImg(h.img)}
                   aria-label={`Powiększ zdjęcie: ${h.name}`}
                 >
-                  <img src={h.img} alt={h.alt} />
+                  <Image src={h.img} alt={h.alt} width={300} height={200} />
                 </button>
                 <figcaption>
                   <div className="horse-name">{h.name}</div>
@@ -56,7 +57,7 @@ export default function HorsesClient() {
 
       {activeImg && (
         <div className="lightbox" onClick={() => setActiveImg(null)}>
-          <img src={activeImg} alt="Podgląd konia" />
+          <Image src={activeImg} alt="Podgląd konia" width={800} height={600} />
         </div>
       )}
     </div>
