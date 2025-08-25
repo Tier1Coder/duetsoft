@@ -1,6 +1,6 @@
 export const metadata = { title: 'O nas | Stajnia Decyma' };
 
-export default function OnasPage() {
+export default function ONasPage() {
   return (
     <div className="page-bg">
       <section className="card card--text">
