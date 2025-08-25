@@ -22,13 +22,11 @@ export default function OnasPage() {
             W naszej stajni opiekujemy się dziesięcioma pięknymi końmi, które są nie tylko naszymi podopiecznymi, ale przede wszystkim przyjaciółmi i nauczycielami. Każdy z nich ma swój wyjątkowy charakter – od spokojnych i cierpliwych, idealnych dla osób rozpoczynających przygodę z jeździectwem, po bardziej energiczne, które doskonale sprawdzają się podczas jazd w terenie. Z troską dbamy o ich dobrostan, codzienną pielęgnację i odpowiednie warunki, dzięki czemu są zdrowe, zrównoważone i chętnie współpracują z jeźdźcami.
           </p>
 
-          {/* Obrazek Agata */}
           <figure className="onas-image">
             <img src="/agata2.jpg" alt="Agata - instruktorka" />
             <figcaption>Agata - instruktorka i właścicielka</figcaption>
           </figure>
 
-          {/* Obrazek Robert */}
           <figure className="onas-image">
             <img src="/robert.jpg" alt="Robert - współprowadzący" />
             <figcaption>Robert</figcaption>
