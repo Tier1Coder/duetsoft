@@ -87,7 +87,7 @@ export default function NewsClient() {
                 {rows.length > 1 && <button type="button" onClick={() => removeRow(i)}>Usuń</button>}
               </div>
             ))}
-            <button type="button" onClick={addRow}>+ Dodaj zdjęcie</button>
+            <button type="button" onClick={addRow}>Dodaj zdjęcie</button>
           </div>
 
           <button type="submit" className="btn-primary">Zapisz wpis</button>
