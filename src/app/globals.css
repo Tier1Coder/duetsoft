@@ -1,14 +1,13 @@
-/* ===== Kolory i zmienne (dopasowane do screena) ===== */
 :root {
-  --bg: #eeeff1;           /* jasne tło strony */
-  --surface: #fff;         /* karty */
-  --line: #e7e7ea;         /* delikatne obramowania */
-  --text: #383838;         /* tekst ciemnoszary */
-  --gold: #c79a45;         /* złoty jak w logo/tekście */
-  --gold-strong: #b6882e;  /* hover/przyciski */
+  --bg: #eeeff1;
+  --surface: #fff;
+  --line: #e7e7ea;
+  --text: #383838;
+  --gold: #c79a45;
+  --gold-strong: #b6882e;
   --shadow: 0 8px 24px rgba(0,0,0,.04), 0 1px 0 rgba(0,0,0,.04);
   --radius: 14px;
-  --wrap: 1040px;          /* szerokość kontentu jak na screenie */
+  --wrap: 1040px;
 }
 
 * {
@@ -25,7 +24,6 @@ body{
   line-height: 1.7;
 }
 
-/* ===== Layout bazowy ===== */
 .page-bg {
   padding: 18px 0 48px;
 }
@@ -40,7 +38,6 @@ body{
   align-items: center;
 }
 
-/* ===== Pasek górny ===== */
 .topbar{
   position: sticky;
   top: 0;
@@ -75,12 +72,11 @@ body{
   color: var(--gold-strong);
 }
 
-/* ===== Karty (białe bloki jak na screenie) ===== */
 .card--logo {
-  padding: 0;              /* usuń odstęp wewnętrzny */
-  background: #fff;        /* całe tło białe */
-  border: none;            /* bez ramki */
-  box-shadow: none;        /* bez cienia */
+  padding: 0;
+  background: #fff;
+  border: none;
+  box-shadow: none;
   margin-bottom: 50px; 
 }
 
@@ -88,7 +84,7 @@ body{
   position: relative;
   height: 540px;
   margin: 0 auto;
-  background: #fff;        /* dopilnuj, że tło też białe */
+  background: #fff;
 }
 
 @media (min-width: 900px) {
@@ -100,15 +96,13 @@ body{
   width: 100%;
   height: 100%;
   display: block;
-  background: #fff;        /* logo ma białe tło */
+  background: #fff;
 }
 
-
-/* ===== Hero: układ 2 kolumny (tekst + foto) ===== */
 .hero{
   display: grid !important;
   grid-template-columns: 0.9fr 1.1fr;
-  column-gap: 80px !important;   /* większy odstęp */
+  column-gap: 80px !important;
 }
 
 @media (min-width: 900px){
@@ -116,7 +110,6 @@ body{
   .hero__text{ padding-right: 12px; }
 }
 
-/* Tekst w złotym kolorze, justowany i wąska kolumna */
 .hero__text p{
   color: var(--gold);
   text-align: justify;
@@ -126,7 +119,6 @@ body{
   letter-spacing: .2px;
 }
 
-/* Zdjęcie po prawej: duży zaokrąglony prostokąt */
 .hero__image{
   position: relative;
   aspect-ratio: 4 / 5;
@@ -141,7 +133,6 @@ body{
   width:100%; height:100%; object-fit: cover; display:block;
 }
 
-/* ===== CTA (przycisk na dole karty) ===== */
 .btn-primary{
   display:inline-flex; align-items:center; justify-content:center;
   padding: 12px 22px;
@@ -156,8 +147,6 @@ body{
 .btn-primary:hover{ background: var(--gold-strong); }
 .btn-primary:active{ transform: translateY(1px); }
 
-/* ===== Stopka / kontakt ===== */
-/* CTA w stopce jako karta z oddechem */
 .footer-cta {
   background: #fff;
   border: 1px solid var(--line);
@@ -167,12 +156,10 @@ body{
   margin: 24px auto 32px;
 }
 
-/* na wszelki wypadek: ostatnia karta też ma oddech na dole */
 .card:last-of-type {
   margin-bottom: 24px;
 }
 
-/* jeśli gdzieś jeszcze masz .footer – wyłącz */
 .footer {
   display: none;
 }
@@ -185,7 +172,6 @@ body{
   margin: 0; color: #4b5563; font-size: 15px;
 }
 
-/* ===== Drobne dostrojenia pod „look” ze screena ===== */
 .card--logo .wrap{ 
   padding: 2px; 
 }
@@ -195,12 +181,10 @@ body{
 }
 
 .card--hero .btn-primary {
-  margin-top: 22px;       /* mały odstęp od tekstu/zdjęcia */
+  margin-top: 22px;
   padding-bottom: 40px;
-
 }
 
-/* złoty tekst na podstronie "O nas" */
 .card--text p {
   color: var(--gold);
   text-align: justify;
@@ -221,8 +205,7 @@ body{
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 2px 6px rgba(0,0,0,.08);
-  text-align: center;       /* wyśrodkowanie podpisu */
-
+  text-align: center;
 }
 .onas-image img{
   width: 100%;
@@ -236,12 +219,11 @@ body{
   font-size: 18px;
   color: var(--gold);
 }
-/* Kontakt – układ pionowy + większa mapa */
 .contact-grid{
-  display: block;                 /* zamiast grida/kolumn */
+  display: block;
 }
 .contact-grid > * + *{
-  margin-top: 28px;               /* odstęp między blokami */
+  margin-top: 28px;
 }
 
 .contact-list{
@@ -256,25 +238,22 @@ body{
   display:flex; gap:12px; flex-wrap:wrap; margin-top:12px;
 }
 
-/* mapa pod danymi, większa wysokość */
 .map-box{
   border:1px solid var(--line);
   border-radius:16px;
   overflow:hidden;
   background:#fafafa;
   width:100%;
-  height:420px;                   /* powiększona */
+  height:420px;
 }
 .map-box iframe{
   width:100%; height:100%; border:0; display:block;
 }
 
-/* (na wszelki wypadek) nadpisz stare media-query */
 @media (min-width: 900px){
   .contact-grid{ display:block !important; }
 }
 
-/* Nasze konie */
 .horses-grid{
   display:grid;
   grid-template-columns: 1fr;
@@ -298,7 +277,7 @@ body{
 
 .horse-card img{
   width:100%;
-  height: 240px;             /* ujednolicona wysokość miniatur */
+  height: 240px;
   object-fit: cover;
   display:block;
 }
@@ -308,7 +287,6 @@ body{
   text-align:left;
 }
 
-/* Media w karcie konia – pełny obraz, efekt zoom przy najechaniu */
 .horse-media {
   aspect-ratio: 16 / 12;
   display: flex;
@@ -338,7 +316,6 @@ body{
   transform: scale(1.08);
 }
 
-/* Lightbox – wyśrodkowany obrazek na ciemnym tle */
 .lightbox {
   position: fixed;
   inset: 0;
@@ -357,7 +334,6 @@ body{
   box-shadow: 0 8px 32px rgba(0,0,0,.25);
 }
 
-/* Animacja pojawiania się lightboxa */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -365,8 +341,8 @@ body{
 
 .horses-grid {
   display: grid;
-  gap: 8px; /* odstęp między kartami */
-  grid-template-columns: 1fr; /* domyślnie na telefonie 1 kolumna */
+  gap: 8px;
+  grid-template-columns: 1fr;
 }
 
 @media (min-width: 700px) {
@@ -376,16 +352,15 @@ body{
 }
 
 .horse-name {
-  font-weight: 700;   /* pogrubienie */
-  font-size: 1.15rem; /* możesz lekko powiększyć czcionkę */
-  margin-bottom: 4px; /* mały odstęp nad opisem */
-  color: var(--gold);     /* złoty kolor */
-
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: 4px;
+  color: var(--gold);
 }
 
 .rules-list {
   margin: 0 0 14px 18px;
-    font-size: 1.15rem;
+  font-size: 1.15rem;
 }
 
 .rules-list > li {
@@ -396,7 +371,6 @@ body{
 .rules-list ul {
   margin-top: 8px;
 }
-
 
 .news-form {
   display: grid;
