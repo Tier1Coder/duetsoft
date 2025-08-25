@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export const metadata = { title: 'O nas | Stajnia Decyma' };
 
 export default function ONasPage() {
@@ -23,12 +25,12 @@ export default function ONasPage() {
           </p>
 
           <figure className="onas-image">
-            <img src="/agata2.jpg" alt="Agata - instruktorka" />
+            <Image src="/agata2.jpg" alt="Agata - instruktorka" width={400} height={400} />
             <figcaption>Agata - instruktorka i właścicielka</figcaption>
           </figure>
 
           <figure className="onas-image">
-            <img src="/robert.jpg" alt="Robert - współprowadzący" />
+            <Image src="/robert.jpg" alt="Robert - współprowadzący" width={400} height={400} />
             <figcaption>Robert</figcaption>
           </figure>
         </div>
