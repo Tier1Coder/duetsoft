@@ -7,7 +7,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="pl">
       <body>
-        {/* Pasek górny */}
         <header className="topbar">
           <div className="wrap">
             <Link href="/" className="brand">Stajnia Decyma</Link>
@@ -22,10 +21,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
         </header>
 
-        {/* Treść strony */}
         <main>{children}</main>
 
-        {/* Prosta stopka z CTA */}
         <footer className="footer-cta">
           <div className="wrap center">
             <Link href="/kontakt" className="btn-primary">Skontaktuj się z nami</Link>
