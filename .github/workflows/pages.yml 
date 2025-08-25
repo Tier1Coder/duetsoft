@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy Next.js site to Pages
 
 on:
   push:
@@ -21,11 +21,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Safety: drop API for Pages
-        run: rm -rf src/app/api src/pages/api
-
-      - run: |
-          git log -1 --name-status
-          find src -maxdepth 3 -type f -path "*/api/*" -print || true
+        run: rm -rf src/app/api src/pages/api || true
 
       - uses: pnpm/action-setup@v4
         with:
@@ -36,14 +32,25 @@ jobs:
           node-version: 20
           cache: pnpm
 
-      - run: pnpm install --frozen-lockfile
+      - name: Restore cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.pnpm-store
+            .next/cache
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}-${{ hashFiles('**/*.[jt]s', '**/*.[jt]sx', '**/*.ts', '**/*.tsx') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}-
 
+      - run: pnpm install --frozen-lockfile
 
       - run: pnpm build
 
-      - run: test -f out/index.html && cp out/index.html out/404.html
+      - run: test -f out/404.html || cp out/index.html out/404.html
 
       - uses: actions/configure-pages@v5
+        with:
+          static_site_generator: next
 
       - uses: actions/upload-pages-artifact@v3
         with:
