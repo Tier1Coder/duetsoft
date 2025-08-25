@@ -38,8 +38,10 @@ export default function OfertaPage() {
             Oprócz regularnych jazd organizujemy również wydarzenia i atrakcje na specjalne okazje:
           </p>
           <ul>
-            <li>sesje fotograficzne z końmi</li>
+            <li>sesje zdjęciowe z końmi</li>
             <li>urodziny i przyjęcia okolicznościowe</li>
+            <li>zawody jeździeckie</li>
+            <li>wycieczki szkolne</li>
             <li>ogniska integracyjne</li>
             <li>letnie kolonie i półkolonie</li>
             <li>zimowe półkolonie</li>
