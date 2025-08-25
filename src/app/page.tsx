@@ -7,7 +7,6 @@ export default function HomePage() {
   return (
     <div className="page-bg">
 
-      {/* Karta: logo */}
       <section className="card card--logo">
         <div className="wrap">
           <div className="logo-box">
@@ -16,7 +15,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Karta: opis + zdjęcie */}
       <section id="onas" className="card card--hero">
         <div className="wrap">
           <div className="hero">
