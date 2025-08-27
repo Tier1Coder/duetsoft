@@ -41,7 +41,7 @@ jobs:
           ls -la out
           du -sh out
           touch out/.nojekyll
-          echo "stajnialecyma.pl" > out/CNAME
+          echo "stajniadecyma.pl" > out/CNAME
           test -f out/404.html || cp out/index.html out/404.html
 
       - name: Configure Pages
