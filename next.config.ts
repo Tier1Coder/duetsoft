@@ -1,8 +1,11 @@
 import type { NextConfig } from 'next';
 
-const config: NextConfig = {
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
+export default {
   output: 'export',
   images: { unoptimized: true },
-};
-
-export default config;
+  trailingSlash: true,
+  basePath,
+  assetPrefix: basePath,
+} satisfies NextConfig;
