@@ -21,7 +21,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Safety: drop API for Pages
+      - name: Safety drop API for Pages
         run: rm -rf src/app/api src/pages/api || true
 
       - name: Setup PNPM
