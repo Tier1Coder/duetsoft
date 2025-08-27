@@ -12,7 +12,7 @@ type Horse = {
 };
 
 const HORSES: Horse[] = [
-  { id: 1,  name: 'Decyma', img: '/decyma.jpg', alt: 'Decyma', desc: 'To od niej wszystko się zaczęło. Ma już swoje lata, ale wciąż jest pełna energii. Ma duszę konia wyścigowego, ale jest też świetna w ujeżdżeniu. Jest prawdziwą przywódczynią stada – spokojna, opiekuńcza i zawsze pierwsza wita ludzi na padoku.' },
+  { id: 1,  name: 'Decyma', img: '/decyma.png', alt: 'Decyma', desc: 'To od niej wszystko się zaczęło. Ma już swoje lata, ale wciąż jest pełna energii. Ma duszę konia wyścigowego, ale jest też świetna w ujeżdżeniu. Jest prawdziwą przywódczynią stada – spokojna, opiekuńcza i zawsze pierwsza wita ludzi na padoku.' },
   { id: 2,  name: 'Sauron', img: '/sauron.jpg', alt: 'Sauron', desc: 'W stepie lubi zamulać, ale na przeszkodach pokazuje pazur. Kocha skakać i galopować. Jest to zdecydowanie typ misia. Uwielbia drapanie po szyi i zazwyczaj przy czyszczeniu przysypia.' },
   { id: 3,  name: 'Agawa',  img: '/agawa.jpg', alt: 'Agawa', desc: 'Jest to klacz z charakterem, raczej niedotykalska, lecz pod jeźdzcem to koń doskonały. Podejmuje się wszystkich nowych zadań, chętnie się uczy i niczego się nie boi. Chętnie chodzi w samotne tereny.' },
   { id: 4,  name: 'Luluś',  img: '/lulek.jpg', alt: 'Luluś', desc: 'Kucyk który potrafi wiele, ale najbardziej lubi pracować z dziećmi. Najgrzeczniejszy z całej ekipy, nie potrzebuje kantara, aby wrócić do stajni z padoku.' },
