@@ -20,32 +20,31 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Safety drop API for Pages
         run: rm -rf src/app/api src/pages/api || true
-
       - name: Setup PNPM
         uses: pnpm/action-setup@v4
         with:
           version: 9
-
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: pnpm
-
       - name: Install deps
         run: pnpm install --frozen-lockfile
-
-      - name: Build (static export)
+      - name: Build
         env:
           NEXT_PUBLIC_BASE_PATH: ""
         run: |
           pnpm build
           touch out/.nojekyll
+          echo "stajniadecyma.pl" > out/CNAME
           test -f out/404.html || cp out/index.html out/404.html
-
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+        with:
+          static_site_generator: next
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
