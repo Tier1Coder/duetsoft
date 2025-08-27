@@ -38,9 +38,12 @@ jobs:
           NEXT_PUBLIC_BASE_PATH: ""
         run: |
           pnpm build
+          ls -la out
+          du -sh out
           touch out/.nojekyll
-          echo "stajniadecyma.pl" > out/CNAME
+          echo "stajnialecyma.pl" > out/CNAME
           test -f out/404.html || cp out/index.html out/404.html
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
         with:
