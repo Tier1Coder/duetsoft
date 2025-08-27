@@ -6,7 +6,6 @@ export const metadata = { title: 'Stajnia Decyma' };
 export default function HomePage() {
   return (
     <div className="page-bg">
-
       <section className="card card--logo">
         <div className="wrap">
           <div className="logo-box">
@@ -28,7 +27,14 @@ export default function HomePage() {
             </div>
 
             <div className="hero__image">
-              <Image src="/hero.jpg" alt="Konie na pastwisku" fill sizes="(max-width: 1024px) 100vw, 520px" />
+              <Image
+                src="/hero.jpg"
+                alt="Konie na pastwisku"
+                width={1600}
+                height={1067}
+                className="hero-img"
+                priority
+              />
             </div>
           </div>
         </div>

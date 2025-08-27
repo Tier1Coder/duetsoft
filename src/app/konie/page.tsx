@@ -57,7 +57,12 @@ export default function HorsesClient() {
 
       {activeImg && (
         <div className="lightbox" onClick={() => setActiveImg(null)}>
-          <Image src={activeImg} alt="Podgląd konia" width={800} height={600} />
+          <Image
+            src={activeImg}
+            alt="Podgląd konia"
+            fill
+            style={{ objectFit: 'contain' }}
+          />
         </div>
       )}
     </div>
