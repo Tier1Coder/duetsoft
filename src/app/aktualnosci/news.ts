@@ -19,7 +19,7 @@ export const NEWS: NewsPost[] = [
     title: 'Czworobok',
     date: '2024-04-19',
     image: '/news/czworobok.jpg',
-    desc: 'Do naszej stajni dołączyła nowa klacz – Bella. Jest bardzo spokojna, świetnie nadaje się do nauki jazdy dla początkujących.'
+    desc: 'Czworobok już gotowy na treningi! Zapraszamy na treningi ujeżdżeniowe.'
   },
   {
     id: 3,
