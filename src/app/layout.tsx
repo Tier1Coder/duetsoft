@@ -9,7 +9,7 @@ export const metadata = {
   robots: 'index, follow',
   icons: { icon: '/favicon.ico' },
   alternates: { canonical: 'https://stajniadecyma.pl/' },
-  keywords: 'stajnia decyma, stajnia lubuskie, stajnia świebodzin, stajnia sulechów, szkółka jeździecka, jazda konna, nauka jazdy konnej, pensjonat dla koni, jazdy konne lubuskie, jazdy konne świebodzin, jazdy konne sulechów',
+  keywords: 'stajnia decyma, stajnia lubuskie, stajnia świebodzin, stajnia sulechów, szkółka jeździecka, jazda konna, nauka jazdy konnej, pensjonat dla koni, jazdy konne lubuskie, jazdy konne świebodzin, jazdy konne sulechów, jazdy konne, szkolka jezdziecka, jazda konna lubuskie, jazda konna świebodzin, jazda konna sulechów, atrakcje lubuskie, konie',
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <title>Stajnia Decyma</title>
         <meta name="description" content="Stajnia Decyma - jazda konna, szkółka jeździecka, stajnia Lubuskie, Świebodzin, Sulechów. Oferta, aktualności, kontakt. Zapraszamy!" />
         <meta name="robots" content="index, follow" />
-        <meta name="keywords" content="stajnia decyma, stajnia lubuskie, stajnia świebodzin, stajnia sulechów, szkółka jeździecka, jazda konna, nauka jazdy konnej, pensjonat dla koni, jazdy konne lubuskie, jazdy konne świebodzin, jazdy konne sulechów" />
+        <meta name="keywords" content="stajnia decyma, stajnia lubuskie, stajnia świebodzin, stajnia sulechów, szkółka jeździecka, jazda konna, nauka jazdy konnej, pensjonat dla koni, jazdy konne lubuskie, jazdy konne świebodzin, jazdy konne sulechów, jazdy konne, szkolka jezdziecka, jazda konna lubuskie, jazda konna świebodzin, jazda konna sulechów, atrakcje lubuskie, konie" />
         <link rel="canonical" href="https://stajniadecyma.pl/" />
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:title" content="Stajnia Decyma" />
