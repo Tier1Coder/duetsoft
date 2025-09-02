@@ -439,5 +439,12 @@ export const NEWS: NewsPost[] = [
     date: '2025-08-26',
     image: '/news/wrz.jpg',
     desc: 'Kochani, osoby które chciałyby ustalić stały termin na jazdy od września (nawet te z którymi już wcześniej było wstępnie ustalane) bardzo prosimy o wiadomość jakie dni i godziny wchodzą w gre oraz informację czy mają byc to treningi indywidualne, dwu ewentualnie trzyosobowe. Trochę nas już jest, a nie chcielibyśmy nikogo pominąć. Oczywiście zdajemy sobie sprawę że w dużej mierze zależy to wszystko od planu lekcji na nowy rok szkolny dlatego zbieramy zapisy do 5 września włącznie (choć wiadomo ze im szybciej tym lepiej)  jest to idealny moment aby zmobilizować się na nowo i po wakacjach wrócić do regularnych treningów które bedą odskocznią od codzienności'
+  },
+  {
+    id: 61,
+    title: 'I zawody skokowe',
+    date: '2025-09-01',
+    image: '/news/zawody-skok.jpg',
+    desc: 'A tak bawiliśmy się wczoraj na naszych pierwszych zawodach skokowych. Dziękujemy za tak liczne przybycie, widowisko pełne wrażeń i emocji!'
   }
 ]
