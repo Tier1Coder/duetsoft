@@ -21,7 +21,7 @@ export default function KontaktPage() {
                 </li>
               </ul>
 
-              <div className="contact-cta">              git add src/app/Topbar.tsx
+              <div className="contact-cta">
                 <a className="btn-primary" href="tel:+48795759410">Zadzwoń teraz</a>
                 <a className="btn-primary" href="mailto:stajniadecyma@icloud.com">Napisz e-mail</a>
               </div>
