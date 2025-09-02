@@ -20,7 +20,7 @@ const HORSES: Horse[] = [
   { id: 6,  name: 'Marlen', img: '/marlen.jpg', alt: 'Marlen', desc: 'Niestety, Marlen jest już na emeryturze. Spędza czas na pastwisku, ciesząc się spokojem wraz ze swoją córką Mają. Za to pięknie się prezentuje, idealnie nadaje się do sesji zdjęciowych.' },
   { id: 7,  name: 'Alexa',  img: '/alexa.jpg', alt: 'Alexa', desc: 'Alexa jest świetnym skoczkiem, potrzebuje delikatnej ręki, aby pokazać swój pełny potencjał. Zawsze przytula się do swojego jeźdzca. Ma ogromne serce do pracy i nigdy nie zawodzi na parkurze.' },
   { id: 8,  name: 'Wendy',  img: '/wendy.jpg', alt: 'Wendy', desc: 'Jest to najstarszy koń w stajni, ma wiele doświadczenia i jest bardzo cierpliwa. Świetnie nadaje się na pierwsze jazdy dla najmłodszych. To spokojna nauczycielka, która krok po kroku wprowadza jeźdźców w świat koni.' },
-  { id: 9,  name: 'Billi',  img: '/billi.jpg', alt: 'Billi', desc: 'Zdecydowanie jest to najabrdziej humorzasty koń w stajni, ma lepsze i gorsze dni, ale mimo to każdy ją uwielbia. Skacze z wielką gracją. Kiedy ma dobry dzień, potrafi oczarować swoim wdziękiem i lekkością ruchu.' },
+  { id: 9,  name: 'Billi',  img: '/billi.jpg', alt: 'Billi', desc: 'Zdecydowanie jest to najbardziej humorzasty koń w stajni, ma lepsze i gorsze dni, ale mimo to każdy ją uwielbia. Skacze z wielką gracją. Kiedy ma dobry dzień, potrafi oczarować swoim wdziękiem i lekkością ruchu.' },
   { id:10,  name: 'Dragon', img: '/dragon.jpg', alt: 'Dragon', desc: 'Najmłodszy członek naszej gromady, pełen energii i ciekawości świata. Uwielbia spedzać czas z człowiekiem, ale lubi też podszczypywać. Jest wulkanem energii – zapowiada się na świetnego konia terenowego i skokowego.' },
 ];
 
