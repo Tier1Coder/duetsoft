@@ -661,7 +661,6 @@ body.footer-bg {
   background: #f9f9f9 !important;
 }
 
-/* Mniejsze nagłówki na widoku mobilnym */
 @media (max-width: 900px) {
   h1 {
     font-size: 24px !important;
@@ -683,5 +682,57 @@ body.footer-bg {
   .btn-primary,
   .news-date {
     font-size: 14px !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .horses-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 4px;
+    padding: 0 12px;
+  }
+  .horse-card {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 22px;
+  }
+  .horse-card img {
+    height: 360px;
+    border-radius: 0 0 22px 22px;
+  }
+  .horse-card figcaption {
+    padding: 24px 18px 24px;
+    font-size: 14px !important;
+  }
+  .horse-name {
+    font-size: 20px !important;
+  }
+}
+
+@media (min-width: 900px) {
+  .horses-grid {
+    gap: 32px;
+    margin-top: 24px;
+    padding: 0 32px;
+  }
+  .horse-card {
+    border-radius: 28px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .horse-card img {
+    height: 420px;
+    border-radius: 0 0 28px 28px;
+  }
+  .horse-card figcaption {
+    padding: 32px 24px 32px;
+    font-size: 18px;
+  }
+  .horse-name {
+    font-size: 24px;
   }
 }
