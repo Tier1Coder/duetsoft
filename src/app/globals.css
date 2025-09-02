@@ -58,8 +58,8 @@ body{
 
 .brand {
   color: var(--gold);
-  font-weight: 600;
-  font-size: 20px;
+  font-weight: 650;
+  font-size: 30px;
   letter-spacing: 1.2px;
   text-decoration: none;
   text-shadow: 0 2px 12px rgba(199,154,69,0.12);
@@ -76,21 +76,21 @@ body{
 .brand:hover,
 .brand:focus {
   color: var(--gold-strong);
-  border-bottom: 2px solid var(--gold-strong);
+  border-bottom: 1px solid var(--gold-strong);
   text-shadow: 0 4px 18px rgba(199,154,69,0.18);
 }
 
 .menu {
-  display: flex;
-  gap: 32px; 
+  gap: 2px;
 }
 
 .menu a {
   color: var(--gold);
   text-decoration: none;
-  font-size: 22px; 
+  font-size: 22px;
+  font-weight: 500; 
   letter-spacing: .2px;
-  padding: 12px 18px;
+  padding: 10px 16px;
   border-radius: 8px;
   transition: background 0.15s;
 }
@@ -105,7 +105,7 @@ body{
   background: var(--gold);
   border: 1.5px solid var(--gold);
   color: var(--black);
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 590;
   padding: 10px 24px;
   cursor: pointer;
@@ -139,7 +139,7 @@ body{
 .mobile-menu a {
   color: var(--gold);
   text-decoration: none;
-  font-size: 24px;
+  font-size: 18px;
   padding: 12px 0;
   border-bottom: 1px solid var(--line);
   background: transparent;
@@ -181,7 +181,8 @@ body{
     display: flex;
   }
   .brand {
-    font-size: 30px;
+    font-size: 26px;
+    font-weight: 700;
     text-align: center;
     margin-bottom: 8px;
     margin-right: 0;
@@ -196,13 +197,14 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 18px 32px;
+    padding: 12px 26px;
     min-height: 64px;
     flex-wrap: nowrap;
     gap: 68px; 
   }
   .brand {
-    font-size: 40px;
+    font-size: 28px;
+    font-weight: 700;
     margin-bottom: 0;
     text-align: left;
     margin-right: 0;
@@ -213,7 +215,7 @@ body{
     vertical-align: middle;
   }
   .menu {
-    gap: 32px;
+    gap: 40px;
     justify-content: flex-end;
     overflow-x: visible;
     padding-bottom: 0;
@@ -222,10 +224,21 @@ body{
     display: flex;
   }
   .menu a {
-    font-size: 22px;
-    padding: 12px 18px;
+    font-size: 20px;
+    padding: 10px 16px;
     white-space: nowrap;
     vertical-align: middle;
+    border-radius: 10px;
+    transition: background 0.18s, box-shadow 0.18s, border-bottom 0.18s;
+    border-bottom: 2px solid transparent;
+  }
+  .menu a:hover,
+  .menu a:focus {
+    color: var(--gold-strong);
+    background: #f7f7f7;
+    box-shadow: 0 2px 8px rgba(199,154,69,0.08);
+    border-bottom: 2px solid var(--gold-strong);
+    text-decoration: none;
   }
 }
 
@@ -263,6 +276,9 @@ body{
 }
 .hero__text {
   color: var(--gold);
+  text-align: justify;
+  hyphens: auto;
+  font-size: 20px;
 }
 @media (min-width: 900px) {
   .hero {
@@ -271,12 +287,11 @@ body{
   }
 
   .hero__text {
+    margin: 0 0 4px 0;
+    letter-spacing: .2px;
     color: var(--gold);
     text-align: justify;
     hyphens: auto;
-    margin: 0 0 4px 0;
-    font-size: 18px;
-    letter-spacing: .2px;
   }
 }
 .hero{
@@ -318,6 +333,9 @@ body{
   .hero__image {
     aspect-ratio: 4 / 5;
     margin-left: 0;
+  }
+  .hero__text {
+    font-size: 16px;
   }
 }
 
@@ -643,3 +661,27 @@ body.footer-bg {
   background: #f9f9f9 !important;
 }
 
+/* Mniejsze nagłówki na widoku mobilnym */
+@media (max-width: 900px) {
+  h1 {
+    font-size: 24px !important;
+  }
+  h2 {
+    font-size: 18px !important;
+  }
+  h3 {
+    font-size: 16px !important;
+  }
+  .card--text p,
+  .news-desc,
+  .news-title,
+  .contact-list li,
+  .rules-list,
+  .onas-image figcaption,
+  .horse-card figcaption,
+  .horse-name,
+  .btn-primary,
+  .news-date {
+    font-size: 14px !important;
+  }
+}
