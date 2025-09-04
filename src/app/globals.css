@@ -736,3 +736,42 @@ body.footer-bg {
     font-size: 24px;
   }
 }
+
+@media (max-width: 1200px) {
+  .menu {
+    display: none;
+  }
+  .menu-btn {
+    display: block;
+  }
+  .mobile-menu {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+    max-width: 360px;
+    width: 90vw;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,.08);
+    border: 1px solid var(--line);
+    margin-top: 8px;
+    padding: 0 8px;
+    z-index: 100;
+    overflow-y: auto;
+  }
+  .mobile-menu.open {
+    display: flex;
+  }
+  .brand {
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 8px;
+    margin-right: 0;
+    padding-left: 0;
+    display: block;
+    width: 100%;
+  }
+}
