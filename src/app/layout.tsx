@@ -32,7 +32,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <meta property="og:url" content="https://stajniadecyma.pl/" />
         <meta property="og:image" content="/logo.png" />
         <meta itemProp="image" content="/logo.png" />
-        <meta name="image" content="/logo.png" />
         <meta name="twitter:image" content="/logo.png" />
       </head>
       <body className="footer-bg">
