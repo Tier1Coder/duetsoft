@@ -25,12 +25,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <meta name="robots" content="index, follow" />
         <meta name="keywords" content={metadata.keywords} />
         <link rel="canonical" href="https://stajniadecyma.pl/" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <meta property="og:title" content="Stajnia Decyma" />
         <meta property="og:description" content={siteDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://stajniadecyma.pl/" />
         <meta property="og:image" content="/logo.png" />
+        <meta itemProp="image" content="/logo.png" />
+        <meta name="twitter:image" content="/logo.png" />
       </head>
       <body className="footer-bg">
         <Topbar />
@@ -46,3 +48,4 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     </html>
   );
 }
+
